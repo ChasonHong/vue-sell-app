@@ -25,18 +25,23 @@ export default {
 }
 </script>
 
-<style lang="stylus" rel="stylesheet/stylus" scoped>
+<style lang="stylus" rel="stylesheet/stylus">
+  @import "./common/stylus/mixin.styl"
+
   .tab
     display: flex
     height: 40px
     line-height: 40px
+    // border-bottom: 1px solid rgba(7, 17, 27, 0.1)
+    border-1px(rgba(7, 17, 27, 0.1))
     .tab-item
       flex: 1
       text-align: center
-      > a
+      & > a
+        display: block
         font-size: 14px
         color: rgb(77, 85, 93)
         &.active
-          color: rgb(240, 20, 20)
+          color: rgb(240, 20, 20)      
 
 </style>
